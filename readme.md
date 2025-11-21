@@ -25,3 +25,5 @@ Each time you start the download, the script generates a random time between 50 
 - Progress updates at random intervals.
 
 - When the time is up, the progress jumps to 100%, and the bar shows "Download Complete!".
+
+![DEMO](./Task_Images/Screenshot%202025-11-21%20at%207.46.27 PM.png)
