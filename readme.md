@@ -1,12 +1,27 @@
-Random Squares Generator
-This project demonstrates how to use JavaScript’s createElement method and Math.random to generate multiple squares at random positions and random rotations on the page. Click the button to add fun, colorful squares wherever you want!
+# ** Download Bar Demo **
 
-How it Works
+This project demonstrates how to create a dynamic download bar in JavaScript using setTimeout and setInterval. The bar simulates a download process where the total download time is randomized, and the progress fills up smoothly based on that duration.
 
-- When you click the “Add Square” button, a new square appears in a random location on the screen.
+## 📋 What You'll Learn
 
-- Each square is rotated at a random angle for visual variety.
+- How to use setInterval for periodic updates.
 
-- The code combines createElement, simple CSS for styling, and Math.random for generating positions and rotations.
+- How to use setTimeout for handling timeouts and completion events.
 
-![DEMO](./Task_Images/Screenshot%202025-11-21%20at%204.40.30 PM.png)
+- Controlling animation speed dynamically based on random duration.
+
+- Basic DOM manipulation for UI feedback.
+
+## 💡 How It Works
+
+### Random Time Generation:
+
+Each time you start the download, the script generates a random time between 50 and 100 ms to simulate varying network speeds.
+
+### Progress Bar Logic:
+
+- The bar fills from 0% to 100% over the randomized duration.
+
+- Progress updates at random intervals.
+
+- When the time is up, the progress jumps to 100%, and the bar shows "Download Complete!".

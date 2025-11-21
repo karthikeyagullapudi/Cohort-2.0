@@ -1,23 +1,23 @@
 let btn = document.querySelector('.b1');
-let main = document.querySelector('main');
+let inner = document.querySelector('.inner');
+let percent = document.querySelector('.bottom h2');
+
+let status = 0;
 
 btn.addEventListener('click', () => {
-  let box = document.createElement('div');
+  btn.style.pointerEvents = 'none';
+  let num = Math.floor(Math.random() * 50) + 50;
 
-  let rl = Math.random() * 100;
-  let rr = Math.random() * 100;
-  let rotation = Math.random() * 360;
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
+  let intervel = setInterval(() => {
+    status++;
+    inner.style.width = `${status}%`;
+    percent.innerHTML = `${status} %`;
+  }, num);
 
-  box.style.width = '200px';
-  box.style.height = '200px';
-  box.style.backgroundColor = `rgb(${r},${g},${b})`;
-  box.style.position = 'absolute';
-  box.style.left = rl + '%';
-  box.style.top = rr + '%';
-  box.style.rotate = rotation + 'deg';
-
-  main.appendChild(box);
+  setTimeout(() => {
+    clearInterval(intervel);
+    btn.innerHTML = 'Downloaded!!';
+    btn.style.opacity = 0.5;
+    console.log(`Download completed in ${num / 10} seconds`);
+  }, num * 100);
 });
